@@ -2,35 +2,103 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Why can aggregate queries still cause privacy issues in statistical databases?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Because aggregate queries always expose individual records",
+        "b": "Because attackers can combine multiple query results to infer private data",
+        "c": "Because aggregate queries are slower to execute",
+        "d": "Because aggregate queries modify the database"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Aggregate queries do not directly expose individual records.",
+        "b": "Carefully constructed aggregate queries can be compared to infer sensitive individual information.",
+        "c": "Query speed is unrelated to privacy leakage.",
+        "d": "Aggregate queries only read data and do not modify it."
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What happens when noise addition is applied to aggregate query results?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Exact query results are returned every time",
+        "b": "Queries are completely blocked",
+        "c": "Small random variations are introduced into the results",
+        "d": "Only encrypted values are returned"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Noise addition prevents exact results from being returned.",
+        "b": "Noise addition does not block queries entirely.",
+        "c": "Adding controlled randomness makes precise inference unreliable.",
+        "d": "Noise addition is different from encryption."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "If a query result includes fewer records than the threshold k, what should the system do?",
+      "answers": {
+        "a": "Return the result with a warning",
+        "b": "Increase the result value automatically",
+        "c": "Suppress or block the query output",
+        "d": "Store the result for later access"
+      },
+      "explanations": {
+        "a": "Warnings alone do not prevent inference attacks.",
+        "b": "Automatically increasing values would distort data incorrectly.",
+        "c": "Query-set-size control blocks results that involve too few records.",
+        "d": "Storing the result does not protect privacy."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which defense mechanism directly limits how often queries can be executed?",
+      "answers": {
+        "a": "Noise Addition",
+        "b": "k-Anonymity",
+        "c": "Rate Limiting",
+        "d": "Differencing Attack"
+      },
+      "explanations": {
+        "a": "Noise addition modifies results, not query frequency.",
+        "b": "k-anonymity controls result set size, not query count.",
+        "c": "Rate limiting restricts repeated or rapid query execution.",
+        "d": "Differencing attack is a threat, not a defense."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Why are differencing attacks dangerous in statistical databases?",
+      "answers": {
+        "a": "They delete records from the database",
+        "b": "They exploit differences between similar queries to reveal private data",
+        "c": "They slow down the database server",
+        "d": "They bypass authentication mechanisms"
+      },
+      "explanations": {
+        "a": "Differencing attacks do not modify or delete data.",
+        "b": "By comparing query results, attackers can infer sensitive information.",
+        "c": "Performance impact is not the main concern here.",
+        "d": "Authentication is not directly involved in differencing attacks."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the main goal of statistical inference control mechanisms?",
+      "answers": {
+        "a": "To eliminate the need for aggregate queries",
+        "b": "To improve database performance",
+        "c": "To prevent leakage of individual information from aggregate results",
+        "d": "To allow unrestricted access to statistical data"
+      },
+      "explanations": {
+        "a": "Aggregate queries are still useful and allowed.",
+        "b": "Performance improvement is not the primary goal.",
+        "c": "Inference control aims to protect individual privacy from aggregate query misuse.",
+        "d": "Unrestricted access increases privacy risks."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
