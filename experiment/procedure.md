@@ -28,26 +28,26 @@ This simulation demonstrates how **aggregate queries** can unintentionally leak 
 
 #### Step 3: Execute Initial Aggregate Query (Baseline Query)
 
-- In the **Query Builder**, select **Query Type** as `SUM(salary)` with applying any filters.
+- In the **Query Builder**, select the **Query Type** as `SUM(salary)` using the default filter settings, or apply specific custom filters if required.
 - Click **Run Query** to execute the query.
-- The system displays the total salary of all employees, which serves as the **baseline aggregate result**.
+- The system displays the total salary of all employees matching the selected filters, which serves as the **baseline aggregate result**.
 - No individual salary is revealed, as the query uses aggregation.
 
 <img src="images/baseline_query.png" alt="Baseline Aggregate Query Result">
 
-
 #### Step 4: Execute Exclusion Query and Observe Leakage
 
-- Without modifying the filters:
+- Using the **same filter settings as the baseline query**:
   - Enter an **Employee ID** in the **Exclude Employee ID** field.
 - Click **Run Query** again.
-- The system executes a **second aggregate query** excluding one employee.
+- The system executes a **second aggregate query** that excludes the specified employee while keeping all other filters unchanged.
 - Compare:
-  - **Query 1 (Baseline SUM)**
-  - **Query 2 (SUM excluding one employee)**
+  - **Query 1:** Baseline `SUM(salary)`
+  - **Query 2:** `SUM(salary)` excluding one employee
 - Observe the **Differencing Attack Detection** panel:
   - The difference between the two results is calculated.
   - This difference reveals the **excluded employee’s exact salary**.
+
 
 <img src="images/differencing_attack.png" alt="Differencing Attack Detected">
 
@@ -76,10 +76,13 @@ This simulation demonstrates how **aggregate queries** can unintentionally leak 
 #### Step 7: Apply Rate Limiting Defense
 
 - Enable **Rate Limiting** using the toggle.
-- Execute aggregate queries repeatedly within a short time interval.
-- Observe that once the allowed query limit is exceeded, further queries are restricted to prevent excessive probing.
+- Set the **maximum number of allowed queries** within the specified time window (the rate limit is **user-editable**, for example, 5 queries per 30 seconds).
+- Execute multiple aggregate queries within the specified time interval.
+- Observe that once the user-defined query limit is exceeded, further queries are **blocked** or temporarily restricted to prevent excessive probing.
 
 <img src="images/rate_limiting.png" alt="Rate Limiting Defense">
+
+
 
 #### Step 8: Apply Differencing Protection Defense
 
