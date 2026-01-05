@@ -2,35 +2,103 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is the primary purpose of statistical databases?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "To allow direct access to individual records",
+        "b": "To provide summarized information using aggregate queries",
+        "c": "To encrypt all stored data",
+        "d": "To prevent all types of database queries"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Statistical databases do not allow direct access to individual records.",
+        "b": "Statistical databases return summarized results such as COUNT, SUM, and AVERAGE to protect individual privacy.",
+        "c": "Encryption is a separate security mechanism and not the primary purpose here.",
+        "d": "Statistical databases allow queries but in an aggregated form."
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What type of attack exploits aggregate query results to infer private information?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Brute-force attack",
+        "b": "SQL injection attack",
+        "c": "Inference attack",
+        "d": "Denial of service attack"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Brute-force attacks target passwords, not statistical queries.",
+        "b": "SQL injection exploits query syntax vulnerabilities.",
+        "c": "Inference attacks deduce sensitive information from aggregate query outputs.",
+        "d": "Denial of service attacks aim to disrupt availability, not infer data."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is a differencing attack in statistical databases?",
+      "answers": {
+        "a": "Running the same query multiple times to overload the system",
+        "b": "Comparing results of slightly different aggregate queries to infer individual data",
+        "c": "Modifying database records directly",
+        "d": "Encrypting query results before returning them"
+      },
+      "explanations": {
+        "a": "This relates to performance issues, not inference.",
+        "b": "Differencing attacks compare closely related aggregate query results to infer private information.",
+        "c": "Attackers do not directly modify data in differencing attacks.",
+        "d": "Encryption does not define a differencing attack."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "How does noise addition help prevent inference attacks?",
+      "answers": {
+        "a": "By blocking all aggregate queries",
+        "b": "By encrypting query results",
+        "c": "By adding controlled random values to query outputs",
+        "d": "By increasing database size"
+      },
+      "explanations": {
+        "a": "Noise addition does not block queries entirely.",
+        "b": "Encryption is not the mechanism used in noise addition.",
+        "c": "Noise addition adds small random values so attackers cannot obtain exact results.",
+        "d": "Database size does not affect inference attacks directly."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the main role of k-anonymity (query-set-size control)?",
+      "answers": {
+        "a": "To ensure each query returns exactly k results",
+        "b": "To allow queries only when the result set size is at least k",
+        "c": "To encrypt k records in the database",
+        "d": "To limit the number of users accessing the database"
+      },
+      "explanations": {
+        "a": "The result size does not have to be exactly k.",
+        "b": "k-anonymity blocks or suppresses results when the query set size is smaller than k.",
+        "c": "k-anonymity does not involve encryption.",
+        "d": "This is related to access control, not k-anonymity."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Why is rate limiting effective against inference attacks?",
+      "answers": {
+        "a": "It increases query execution speed",
+        "b": "It encrypts all query results",
+        "c": "It restricts repeated or rapid execution of queries",
+        "d": "It allows unlimited access to aggregate queries"
+      },
+      "explanations": {
+        "a": "Rate limiting does not affect speed.",
+        "b": "Rate limiting does not encrypt data.",
+        "c": "Inference attacks rely on repeated queries, which rate limiting prevents.",
+        "d": "Unlimited access would increase inference risk."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"

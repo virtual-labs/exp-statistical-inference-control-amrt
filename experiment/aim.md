@@ -1,1 +1,2 @@
-### Aim of the experiment
+
+The objective of this experiment is to prevent data leakage through statistical queries. The outcome of this experiment is to understand how aggregate query patterns can leak private information. Following are the steps in the experiment. 
