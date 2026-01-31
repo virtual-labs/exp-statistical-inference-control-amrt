@@ -1,5 +1,5 @@
 
-This simulation demonstrates how **aggregate queries** can unintentionally leak **individual-level private information** through a **differencing attack**, highlighting the importance of **statistical inference control mechanisms**.
+This simulation demonstrates how **aggregate queries** can unintentionally leak **individual private information** through a **differencing attack**, highlighting the importance of **statistical inference control mechanisms**.
 
 
 #### Step 1: Introduction to Statistical Inference Control
