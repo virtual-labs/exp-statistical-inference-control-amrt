@@ -1,1 +1,1 @@
-The objective of this experiment is to prevent data leakage in statistical databases by analyzing how aggregate query patterns can reveal private information and by applying appropriate defense mechanisms.
+The objective of this experiment is to prevent data leakage in statistical databases by analyzing how aggregate query patterns can reveal private information and by implementing defense mechanisms such as differencing protection, rate limiting, k-anonymity, and noise addition.
