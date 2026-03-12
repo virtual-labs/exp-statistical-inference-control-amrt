@@ -11,7 +11,7 @@
       },
       "explanations": {
         "a": "Statistical databases do not allow direct access to individual records.",
-        "b": "Statistical databases return summarized results such as COUNT, SUM, and AVERAGE to protect individual privacy.",
+        "b": "Statistical databases return summarized results such as COUNT, SUM, and AVG to protect individual privacy.",
         "c": "Encryption is a separate security mechanism and not the primary purpose here.",
         "d": "Statistical databases allow queries but in an aggregated form."
       },

@@ -89,7 +89,7 @@ This simulation demonstrates how **aggregate queries** can unintentionally leak 
 - Execute an aggregate query and attempt an **exclude-one** query pattern by excluding a single employee.
 - Queries identified as potential differencing attacks (detected by identifying sequential queries with almost identical filters differing by only a single exclusion) are blocked, while safe aggregate queries return protected aggregate results.
 
- Once all individual defenses have been explored, click the **Enable All Defenses & Test Attack →** button on the Defenses page.
+Once all individual defenses have been explored, click the **Enable All Defenses & Test Attack →** button on the Defenses page.
 
 <img src="images/enable all defences.png" alt="Differencing Protection Defense">
 
@@ -97,7 +97,7 @@ This simulation demonstrates how **aggregate queries** can unintentionally leak 
 
 #### Step 9: Final Systematic Testing
 
-- After enabling all defenses, the system automatically navigates  to **Attacker Mode**, with Noise Addition, k-Anonymity (Query-Set-Size Control), Rate Limiting, and Differencing Protection activated simultaneously.
+- After enabling all defenses, the system automatically navigates to **Attacker Mode**, with Noise Addition, k-Anonymity (Query-Set-Size Control), Rate Limiting, and Differencing Protection activated simultaneously.
 
 <img src="images/defence on-01.png" alt="Enable All Defenses">
 
