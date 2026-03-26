@@ -1,4 +1,7 @@
+1. **[Differential Privacy Concepts — Microsoft Learn](https://learn.microsoft.com/en-us/azure/machine-learning/concept-differential-privacy)**  
 
-1. **[Inference in Database Security — Overview of Inference Attacks and Defenses](https://drbtaneja.com/inference-in-database-security/)**  
-2. **[Differential Privacy — Protecting Individual Information in Aggregate Queries](https://en.wikipedia.org/wiki/Differential_privacy)**  
-3. **[k-Anonymity — Model for Protecting Privacy in Data Releases](https://en.wikipedia.org/wiki/K-anonymity)** 
+2. **[Differential Privacy Guidelines — NIST SP 800-226](https://csrc.nist.gov/pubs/sp/800/226/final)**  
+
+3. **[Data Anonymization and k-Anonymity — PostgreSQL Anonymizer](https://postgresql-anonymizer.readthedocs.io/en/stable/)**  
+
+4. **[Aggregate Functions and Data Aggregation — PostgreSQL Documentation](https://www.postgresql.org/docs/current/functions-aggregate.html)**  
