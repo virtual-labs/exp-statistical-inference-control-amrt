@@ -1,6 +1,4 @@
-
 This simulation demonstrates how **aggregate queries** can unintentionally leak **individual-level private information** through a **differencing attack**, highlighting the importance of **statistical inference control mechanisms**.
-
 
 #### Step 1: Introduction to Statistical Inference Control
 
@@ -11,7 +9,6 @@ This simulation demonstrates how **aggregate queries** can unintentionally leak 
 
 <img src="images/intro.png" alt="Statistical Inference Control Overview">
 
-
 #### Step 2: Attacker Page - Aggregate Query Privacy Attack
 
 - The **Demonstrating Aggregate Query Privacy Attacks** page introduces the attacker’s perspective, where only **aggregate queries** are permitted.
@@ -21,9 +18,6 @@ This simulation demonstrates how **aggregate queries** can unintentionally leak 
   - **Query Builder** to construct aggregate SQL queries.
 
 <img src="images/attacker_intro.png" alt="Aggregate Query Attack Introduction">
-
-
-
 
 #### Step 3: Execute Initial Aggregate Query (Baseline Query)
 
@@ -47,7 +41,6 @@ This simulation demonstrates how **aggregate queries** can unintentionally leak 
   - The difference between the two results is calculated.
   - This difference reveals the **excluded employee’s exact salary** (assuming no protection mechanisms are active).
 
-
 <img src="images/differencing_attack.png" alt="Differencing Attack Detected">
 
 #### Step 5: Apply Noise Addition Defense
@@ -59,8 +52,6 @@ This simulation demonstrates how **aggregate queries** can unintentionally leak 
 
 <img src="images/noise_addition.png" alt="Noise Addition Defense">
 
-
-
 #### Step 6: Apply k-Anonymity Defense
 
 - Enable **k-Anonymity** using the toggle.
@@ -69,8 +60,6 @@ This simulation demonstrates how **aggregate queries** can unintentionally leak 
 - Queries returning a total count of fewer than **k records** are blocked (this is k-thresholding, a simplified form of k-anonymity) to prevent re-identification.
 
 <img src="images/k_anonymity.png" alt="k-Anonymity Defense">
-
-
 
 #### Step 7: Apply Rate Limiting Defense
 
@@ -81,8 +70,6 @@ This simulation demonstrates how **aggregate queries** can unintentionally leak 
 
 <img src="images/rate_limiting.png" alt="Rate Limiting Defense">
 
-
-
 #### Step 8: Apply Differencing Protection Defense
 
 - Enable **Differencing Protection** using the toggle.
@@ -92,8 +79,6 @@ This simulation demonstrates how **aggregate queries** can unintentionally leak 
 Once all individual defenses have been explored, click the **Enable All Defenses & Test Attack →** button on the Defenses page.
 
 <img src="images/enable all defences.png" alt="Differencing Protection Defense">
-
-
 
 #### Step 9: Final Systematic Testing
 
@@ -108,7 +93,7 @@ Once all individual defenses have been explored, click the **Enable All Defenses
 
 - Observe the system behavior under combined protection:
   - **Noise Addition** modifies aggregate results to prevent exact value extraction.
-  - **k-Anonymity** blocks queries involving fewer than the defined threshold *k* records.
+  - **k-Anonymity** blocks queries involving fewer than the defined threshold _k_ records.
   - **Rate Limiting** restricts excessive or repeated query execution.
   - **Differencing Protection** detects and blocks suspicious query patterns that attempt to isolate individual data.
 
